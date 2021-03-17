@@ -1,12 +1,15 @@
 # simple-kvm-guest
-一个简单KVM用户空间实例
+
+一个简单 KVM 用户空间实例
+
+## Quick start
 
 ```sh
-make -C guest
+make -C quick-start/guest
 ```
 
 ```sh
-gcc kvm.c -o kvm
+gcc quick-start/kvm.c -o kvm
 ```
 
 ```sh
@@ -22,4 +25,18 @@ pidstat -p `pidod kvm` 1
 08:34:50 PM     0      3655    0.00    0.00  100.00  100.00     1  kvm
 08:34:51 PM     0      3655    0.00    0.00  100.00  100.00     1  kvm
 08:34:52 PM     0      3655    0.00    0.00  100.00  100.00     1  kvm
+```
+
+## Serial IO
+
+```sh
+make -C serial-io/guest
+```
+
+```sh
+gcc serial-io/kvm.c -o kvm -lrt
+```
+
+```sh
+./kvm
 ```
