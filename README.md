@@ -1,7 +1,5 @@
 # simple-kvm-guest
 
-一个简单 KVM 用户空间实例
-
 ## Quick start
 
 ```sh
